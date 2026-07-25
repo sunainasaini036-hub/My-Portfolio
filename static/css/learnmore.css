@@ -1,0 +1,535 @@
+/* ==========================================
+   GOOGLE FONT
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    background:#f6f8ff;
+
+    color:#333;
+
+}
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+nav{
+
+    width:100%;
+
+    background:#ffffff;
+
+    padding:22px 8%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+}
+
+.logo{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:#5f2eea;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:35px;
+
+}
+
+nav ul li a{
+
+    text-decoration:none;
+
+    color:#333;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+nav ul li a:hover{
+
+    color:#5f2eea;
+
+}
+
+/* ==========================================
+   BACK BUTTON
+========================================== */
+
+.back-section{
+
+    width:90%;
+
+    max-width:1400px;
+
+    margin:35px auto 15px;
+
+}
+
+.back-btn{
+
+    display:inline-block;
+
+    background:#5f2eea;
+
+    color:#ffffff;
+
+    text-decoration:none;
+
+    padding:14px 28px;
+
+    border-radius:40px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(95,46,234,.25);
+
+}
+
+.back-btn:hover{
+
+    background:#4527a0;
+
+    transform:translateY(-4px);
+
+}
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+.learnhero{
+
+    width:90%;
+
+    max-width:1400px;
+
+    margin:30px auto 70px;
+
+    padding:80px 40px;
+
+    text-align:center;
+
+    border-radius:30px;
+
+    background:linear-gradient(135deg,#6a11cb,#2575fc);
+
+    color:#ffffff;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+}
+
+.learnhero h1{
+
+    font-size:58px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+.learnhero p{
+
+    max-width:850px;
+
+    margin:auto;
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    font-weight:400;
+
+}
+
+
+
+/* ==========================================
+   PROJECT CARDS
+========================================== */
+
+.learn-cards{
+
+    width:90%;
+
+    max-width:1400px;
+
+    margin:0 auto 80px;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+
+    gap:35px;
+
+}
+
+
+
+/* ==========================================
+   INDIVIDUAL CARD
+========================================== */
+
+.lcard{
+
+    background:#ffffff;
+
+    border-radius:25px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    min-height:500px;
+
+}
+
+.lcard:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 40px rgba(95,46,234,.18);
+
+}
+
+
+
+/* ==========================================
+   CARD ICON
+========================================== */
+
+.licon{
+
+    font-size:60px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+/* ==========================================
+   CARD TITLE
+========================================== */
+
+.lcard h2{
+
+    color:#4527a0;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+}
+
+
+
+/* ==========================================
+   CARD DESCRIPTION
+========================================== */
+
+.lcard p{
+
+    color:#666;
+
+    font-size:16px;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+}
+/* ==========================================
+   TAGS
+========================================== */
+
+.tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:10px;
+
+    margin-top:auto;
+
+    margin-bottom:30px;
+
+}
+
+.tags span{
+
+    background:#ece6ff;
+
+    color:#5f2eea;
+
+    padding:8px 16px;
+
+    border-radius:25px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.view-btn{
+
+    display:inline-block;
+
+    width:100%;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    background:linear-gradient(135deg,#6a11cb,#2575fc);
+
+    color:#ffffff;
+
+    padding:14px;
+
+    border-radius:40px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.view-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 25px rgba(95,46,234,.25);
+
+}
+
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer{
+
+    margin-top:20px;
+
+    background:#ffffff;
+
+    padding:25px;
+
+    text-align:center;
+
+    color:#555;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    box-shadow:0 -3px 15px rgba(0,0,0,.05);
+
+}
+
+
+
+/* ==========================================
+   RESPONSIVE TABLET
+========================================== */
+
+@media(max-width:992px){
+
+    .learnhero h1{
+
+        font-size:46px;
+
+    }
+
+    .learnhero p{
+
+        font-size:18px;
+
+    }
+
+    .learn-cards{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+
+
+/* ==========================================
+   RESPONSIVE MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+    nav{
+
+        flex-direction:column;
+
+        gap:15px;
+
+    }
+
+    nav ul{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+    .learnhero{
+
+        padding:60px 25px;
+
+    }
+
+    .learnhero h1{
+
+        font-size:38px;
+
+    }
+
+    .learnhero p{
+
+        font-size:17px;
+
+    }
+
+    .learn-cards{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .lcard{
+
+        min-height:auto;
+
+    }
+
+}
+
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media(max-width:480px){
+
+    .logo{
+
+        font-size:24px;
+
+    }
+
+    .learnhero h1{
+
+        font-size:30px;
+
+    }
+
+    .learnhero p{
+
+        font-size:15px;
+
+    }
+
+    .back-btn{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+    .view-btn{
+
+        width:100%;
+
+    }
+
+}

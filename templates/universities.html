@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Universities API</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/universities.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <a href="{{ url_for('apiscraping') }}" class="back-btn">
+            ← Back
+        </a>
+
+        <h1>🎓 Universities API</h1>
+
+        <a href="http://universities.hipolabs.com/"
+           target="_blank"
+           class="website-btn">
+
+            Official API
+
+        </a>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <h2>Universities Information API</h2>
+
+        <p>
+
+            Retrieve university information using a REST API.
+
+            This project demonstrates API Integration,
+            JSON Parsing,
+            Data Processing,
+            and Dynamic Data Visualization
+            using Python, Flask, HTML and CSS.
+
+        </p>
+
+    </section>
+
+
+    <!-- ================= SUMMARY ================= -->
+
+    <section class="summary">
+
+        <div class="summary-card">
+
+            <div class="icon">🏫</div>
+
+            <h3>{{ data|length }}</h3>
+
+            <p>Total Universities</p>
+
+        </div>
+
+        <div class="summary-card">
+
+            <div class="icon">🌍</div>
+
+            <h3>{{ data[0].country }}</h3>
+
+            <p>Country</p>
+
+        </div>
+
+        <div class="summary-card">
+
+            <div class="icon">📡</div>
+
+            <h3>LIVE</h3>
+
+            <p>API Status</p>
+
+        </div>
+
+        <div class="summary-card">
+
+            <div class="icon">📄</div>
+
+            <h3>JSON</h3>
+
+            <p>Response Type</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PROJECT HIGHLIGHTS ================= -->
+
+    <section class="highlights">
+
+        <h2>✨ Project Highlights</h2>
+
+        <div class="highlight-grid">
+
+            <div class="highlight-card">
+                REST API Integration
+            </div>
+
+            <div class="highlight-card">
+                JSON Data Processing
+            </div>
+
+            <div class="highlight-card">
+                Flask Template Rendering
+            </div>
+
+            <div class="highlight-card">
+                Dynamic University Listing
+            </div>
+
+            <div class="highlight-card">
+                Responsive User Interface
+            </div>
+
+            <div class="highlight-card">
+                Website Redirection
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= DIRECTORY ================= -->
+
+    <section class="directory">
+
+        <h2>📚 University Directory</h2>
+
+        <p>
+
+            Browse university information retrieved from the API.
+
+        </p>  
+
+    <!-- ================= UNIVERSITY TABLE ================= -->
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>#</th>
+
+                    <th>University Name</th>
+
+                    <th>State / Province</th>
+
+                    <th>Country</th>
+
+                    <th>Domain</th>
+
+                    <th>Website</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                {% for university in data %}
+
+                <tr>
+
+                    <td>{{ loop.index }}</td>
+
+                    <td class="name">
+
+                        {{ university.name }}
+
+                    </td>
+
+                    <td>
+
+                        {{ university["state-province"] if university["state-province"] else "N/A" }}
+
+                    </td>
+
+                    <td>
+
+                        {{ university.country }}
+
+                    </td>
+
+                    <td>
+
+                        {{ university.domains[0] }}
+
+                    </td>
+
+                    <td>
+
+                        <a href="{{ university.web_pages[0] }}"
+                           target="_blank"
+                           class="visit-btn">
+
+                            Visit Website
+
+                        </a>
+
+                    </td>
+
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+<!-- ================= API INFORMATION ================= -->
+
+<section class="api-info">
+
+    <h2>📡 API Information</h2>
+
+    <div class="info-grid">
+
+        <div class="info-card">
+
+            <h3>API Name</h3>
+
+            <p>Universities API</p>
+
+        </div>
+
+        <div class="info-card">
+
+            <h3>Method</h3>
+
+            <p>GET</p>
+
+        </div>
+
+        <div class="info-card">
+
+            <h3>Response</h3>
+
+            <p>JSON</p>
+
+        </div>
+
+        <div class="info-card">
+
+            <h3>Authentication</h3>
+
+            <p>Not Required</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TECHNOLOGY STACK ================= -->
+
+<section class="tech-stack">
+
+    <h2>🛠 Technologies Used</h2>
+
+    <div class="tech-grid">
+
+        <div class="tech">Python</div>
+
+        <div class="tech">Flask</div>
+
+        <div class="tech">Requests</div>
+
+        <div class="tech">REST API</div>
+
+        <div class="tech">JSON</div>
+
+        <div class="tech">HTML5</div>
+
+        <div class="tech">CSS3</div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <h3>
+
+        Developed by Sunaina Saini
+
+    </h3>
+
+    <p>
+
+        AIML Bootcamp Portfolio Project
+
+    </p>
+
+</footer>
+
+</div>
+
+</body>
+
+</html>

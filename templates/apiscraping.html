@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Scraping Projects</title>
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/apiscraping.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+    <h2 class="logo">Sunaina Saini</h2>
+
+    <ul>
+        <li><a href="/portfolio">Portfolio</a></li>
+        <li><a href="/webscraping">Web Scraping</a></li>
+    </ul>
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+        <h1>🔗 API Scraping Projects</h1>
+
+        <p>
+            Build real-world applications using REST APIs, JSON processing and Flask backend integration.
+        </p>
+    </div>
+
+</section>
+
+<!-- ================= PROJECT CARDS ================= -->
+
+<section class="cards">
+
+    <!-- CARD 1 -->
+    <div class="card">
+
+        <div class="icon">💱</div>
+
+        <h2>Currency Exchange Tracker</h2>
+
+        <p>Live currency conversion using REST API.</p>
+
+        <div class="project-buttons">
+
+            <a href="{{ url_for('currency_api') }}" class="btn">
+                Open Project
+            </a>
+
+            <a href="https://github.com/sunainasaini036-hub/AIML-Bootcamp/blob/main/WebScrapingProject/api%20webscraping/currency_exchange_api.ipynb"
+               target="_blank"
+               class="btn notebook-btn">
+                Open Notebook
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="card">
+
+        <div class="icon">🎓</div>
+
+        <h2>Universities Explorer</h2>
+
+        <p>
+            Explore real-time data of Indian universities using REST API.
+            View names, domains, and official websites.
+        </p>
+
+        <a href="/universities" class="btn">
+            Open Project
+        </a>
+        
+            <a href="https://github.com/sunainasaini036-hub/AIML-Bootcamp/blob/main/WebScrapingProject/api%20webscraping/Universities%20API.ipynb"
+               target="_blank"
+               class="btn notebook-btn">
+                Open Notebook
+            </a>
+
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="card">
+
+        <div class="icon">📂</div>
+
+        <h2>JSONFlow Explorer</h2>
+
+        <p>
+            Highlights that you're working with JSON APIs and dynamic data.
+        </p>
+
+        <a href="{{ url_for('jsonplaceholder_api') }}" class="btn">
+            Open Project
+        </a>
+        
+            <a href="https://github.com/sunainasaini036-hub/AIML-Bootcamp/blob/main/WebScrapingProject/api%20webscraping/jsonplaceholder_API.ipynb"
+               target="_blank"
+               class="btn notebook-btn">
+                Open Notebook
+            </a>
+
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="card">
+
+        <div class="icon">📺</div>
+
+        <h2>TVMaze Show Explorer</h2>
+
+        <p>
+            Fetch TV shows, ratings, genres, and schedules using TVMaze API.
+        </p>
+
+        <a href="/tvmaze" class="btn">
+            Open Project
+        </a>
+        
+            <a href="https://github.com/sunainasaini036-hub/AIML-Bootcamp/blob/main/WebScrapingProject/api%20webscraping/TVMaze.api.ipynb"
+               target="_blank"
+               class="btn notebook-btn">
+                Open Notebook
+            </a>
+
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="card">
+
+        <div class="icon">🛒</div>
+
+        <h2>Fake Store API</h2>
+
+        <p>
+            Fetch products, prices and categories from the Fake Store REST API using Python and Requests.
+        </p>
+
+        <a href="{{ url_for('fakestore') }}" class="btn">
+            Open Project
+        </a>
+        
+            <a href="https://github.com/sunainasaini036-hub/AIML-Bootcamp/blob/main/WebScrapingProject/api%20webscraping/Fake%20Store%20API.ipynb"
+               target="_blank"
+               class="btn notebook-btn">
+                Open Notebook
+            </a>
+
+    </div>
+
+</section>
+
+<!-- ================= FEATURES ================= -->
+
+<section>
+
+    <h2>Why API Scraping?</h2>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+            <h3>⚡ Real-Time Data</h3>
+            <p>Fetch live data from APIs instantly.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>🌍 Multiple APIs</h3>
+            <p>Work with Weather, Spotify, Currency and News APIs.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>📊 JSON Handling</h3>
+            <p>Learn how APIs return and process JSON data.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= BACK BUTTON ================= -->
+
+<div class="back">
+
+    <a href="/webscraping" class="btn">
+        ⬅ Back to Web Scraping
+    </a>
+
+</div>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+    © 2026 Sunaina Saini | API Scraping Projects
+</footer>
+
+</body>
+</html>

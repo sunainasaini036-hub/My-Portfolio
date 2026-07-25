@@ -1,0 +1,578 @@
+/*==============================
+GOOGLE FONT
+==============================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/*==============================
+RESET
+==============================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5f7ff;
+    color:#333;
+    overflow-x:hidden;
+}
+
+/*==============================
+NAVBAR
+==============================*/
+
+nav{
+
+    width:100%;
+    padding:20px 8%;
+    background:white;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    position:sticky;
+    top:0;
+    z-index:999;
+
+}
+
+.logo{
+
+    color:#5f2eea;
+    font-size:30px;
+    font-weight:700;
+
+}
+
+nav ul{
+
+    display:flex;
+    list-style:none;
+    gap:35px;
+
+}
+
+nav ul li a{
+
+    text-decoration:none;
+    color:#444;
+    font-weight:600;
+    transition:.3s;
+
+}
+
+nav ul li a:hover{
+
+    color:#5f2eea;
+
+}
+
+/*==============================
+HERO
+==============================*/
+.hero{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:50px auto;
+
+    background:linear-gradient(135deg,#6a11cb,#2575fc);
+
+    border-radius:30px;
+
+    padding:70px 50px;
+
+    text-align:center;
+
+    color:white;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+
+}
+
+.hero h1{
+
+    font-size:55px;
+
+    color:white;
+
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    color:rgba(255,255,255,0.95);
+
+}
+
+/*==============================
+BUTTONS
+==============================*/
+
+.buttons{
+
+    margin-top:35px;
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.btn{
+
+    padding:14px 30px;
+
+    background:linear-gradient(135deg,#6a11cb,#2575fc);
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:40px;
+
+    transition:.35s;
+
+    font-weight:600;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.btn2{
+
+    padding:14px 30px;
+
+    border:2px solid #5f2eea;
+
+    color:#5f2eea;
+
+    border-radius:40px;
+
+    text-decoration:none;
+
+    transition:.35s;
+
+    font-weight:600;
+
+}
+
+.btn2:hover{
+
+    background:#5f2eea;
+
+    color:white;
+
+}
+
+/*==============================
+COMMON SECTION
+==============================*/
+
+section{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:90px auto;
+
+}
+
+section h2{
+
+    text-align:center;
+
+    font-size:38px;
+
+    color:#3523c9;
+
+    margin-bottom:40px;
+
+}
+
+/*==============================
+ABOUT
+==============================*/
+
+.about-card{
+
+    background:white;
+
+    padding:45px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    line-height:2;
+
+}
+
+/*==============================
+TABLE
+==============================*/
+
+.table-container{
+
+    overflow-x:auto;
+
+    background:white;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 30px rgba(0,0,0,.08);
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+thead{
+
+    background:linear-gradient(135deg,#6a11cb,#2575fc);
+
+    color:white;
+
+}
+
+th{
+
+    padding:18px;
+
+    text-align:center;
+
+    font-size:15px;
+
+}
+
+td{
+
+    padding:16px;
+
+    text-align:center;
+
+    border-bottom:1px solid #eee;
+
+}
+
+tbody tr:hover{
+
+    background:#f3f4ff;
+
+}/*==============================
+TECHNOLOGY CARDS
+==============================*/
+
+.tech-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.tech-card{
+    background:#fff;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 12px 25px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.tech-card:hover{
+    transform:translateY(-10px);
+}
+
+.tech-card i{
+    font-size:50px;
+    color:#5f2eea;
+    margin-bottom:20px;
+}
+
+.tech-card h3{
+    margin-bottom:15px;
+    color:#3523c9;
+}
+
+.tech-card p{
+    color:#666;
+    line-height:1.7;
+}
+
+/*==============================
+WORKFLOW
+==============================*/
+
+.workflow-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:25px;
+}
+
+.step{
+    width:220px;
+    background:#fff;
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 12px 25px rgba(0,0,0,.08);
+}
+
+.number{
+    width:60px;
+    height:60px;
+    background:linear-gradient(135deg,#6a11cb,#2575fc);
+    color:#fff;
+    border-radius:50%;
+    margin:auto;
+    margin-bottom:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.arrow{
+    font-size:30px;
+    color:#5f2eea;
+}
+
+/*==============================
+STATISTICS
+==============================*/
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.stat-card{
+    background:#fff;
+    border-radius:20px;
+    padding:40px;
+    text-align:center;
+    box-shadow:0 12px 25px rgba(0,0,0,.08);
+}
+
+.stat-card h1{
+    color:#5f2eea;
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+/*==============================
+FEATURES
+==============================*/
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.feature-card{
+    background:#fff;
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 12px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.feature-card:hover{
+    transform:translateY(-10px);
+}
+
+.feature-card i{
+    font-size:45px;
+    color:#5f2eea;
+    margin-bottom:20px;
+}
+
+.feature-card h3{
+    color:#3523c9;
+    margin-bottom:15px;
+}
+
+.feature-card p{
+    color:#666;
+    line-height:1.7;
+}
+
+/*==============================
+CHALLENGES
+==============================*/
+
+.challenge-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.challenge-card{
+    background:#fff;
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 12px 25px rgba(0,0,0,.08);
+}
+
+.challenge-card i{
+    font-size:45px;
+    color:#ff6b6b;
+    margin-bottom:20px;
+}
+
+.challenge-card h3{
+    color:#3523c9;
+    margin-bottom:15px;
+}
+
+.challenge-card p{
+    color:#666;
+    line-height:1.8;
+}
+
+/*==============================
+LEARNING
+==============================*/
+
+.learning-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:25px;
+}
+
+.learn-card{
+    background:#fff;
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 12px 25px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.learn-card:hover{
+    transform:translateY(-10px);
+}
+
+.learn-card i{
+    font-size:40px;
+    color:#5f2eea;
+    margin-bottom:15px;
+}
+
+.learn-card h3{
+    color:#3523c9;
+}
+
+/*==============================
+PROJECT INFO
+==============================*/
+
+.info-card{
+    background:#fff;
+    padding:45px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 12px 25px rgba(0,0,0,.08);
+    line-height:2;
+}
+
+/*==============================
+BOTTOM BUTTONS
+==============================*/
+
+.bottom-buttons{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+/*==============================
+FOOTER
+==============================*/
+
+footer{
+    margin-top:80px;
+    background:#3523c9;
+    color:#fff;
+    text-align:center;
+    padding:45px 20px;
+}
+
+footer h3{
+    margin-bottom:15px;
+}
+
+footer p{
+    margin-top:10px;
+    color:#ddd;
+}
+
+/*==============================
+RESPONSIVE
+==============================*/
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:36px;
+}
+
+.hero-text{
+    padding:35px;
+}
+
+.workflow-container{
+    flex-direction:column;
+}
+
+.arrow{
+    transform:rotate(90deg);
+}
+
+.buttons{
+    justify-content:center;
+}
+
+nav{
+    flex-direction:column;
+    gap:15px;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+}

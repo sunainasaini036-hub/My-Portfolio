@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Static Web Scraping Projects</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/staticscraping.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+    <h2 class="logo">Sunaina Saini</h2>
+
+    <ul>
+        <li><a href="/portfolio">Portfolio</a></li>
+        <li><a href="/learnmore">Learn More</a></li>
+    </ul>
+
+</nav>
+
+<!-- ================= BACK BUTTON ================= -->
+
+<div class="back-section">
+
+    <a href="/webscraping" class="back-btn">
+        ⬅ Back to Web Scraping
+    </a>
+
+</div>
+
+<!-- ================= HERO SECTION ================= -->
+
+<section class="hero">
+
+    <h1>📊 Static Web Scraping Projects</h1>
+
+    <p>
+        Explore real-world web scraping projects built using Python,
+        Requests, BeautifulSoup and Pandas.
+    </p>
+
+</section>
+<!-- ================= PROJECTS ================= -->
+
+<section class="cards">
+
+    <!-- Amazon -->
+
+    <div class="card">
+
+        <div class="icon">🛒</div>
+
+        <h2>Amazon Scraper</h2>
+
+        <p>
+            Extract product names, prices, ratings and reviews
+            from Amazon pages.
+        </p>
+
+        <div class="skills">
+
+            <span>Python</span>
+            <span>BeautifulSoup</span>
+            <span>Requests</span>
+
+        </div>
+
+        <div class="project-buttons">
+
+            <a href="/amazonscraping" class="btn">
+                Open Project
+            </a>
+
+            <a href="https://github.com/sunainasaini036-hub/AIML-Bootcamp/blob/main/WebScrapingProject/static_webscraping/Amazon_web_scrapping.ipynb"
+               target="_blank"
+               class="btn notebook-btn">
+                Open Notebook
+            </a>
+
+
+        </div>
+
+    </div>
+
+    <!-- Goodreads -->
+
+    <div class="card">
+
+        <div class="icon">📚</div>
+
+        <h2>Goodreads Scraper</h2>
+
+        <p>
+            Extract book titles, ratings and prices using
+            BeautifulSoup.
+        </p>
+
+        <div class="skills">
+
+            <span>Python</span>
+            <span>CSV</span>
+            <span>Pandas</span>
+
+        </div>
+
+        <div class="project-buttons">
+
+            <a href="/bookscraping" class="btn">
+                Open Project
+            </a>
+
+            <a href="https://github.com/sunainasaini036-hub/AIML-Bootcamp/blob/main/WebScrapingProject/api%20webscraping/currency_exchange_api.ipynb"
+               target="_blank"
+               class="btn notebook-btn">
+                Open Notebook
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- Mutual Funds -->
+
+    <div class="card">
+
+        <div class="icon">📊</div>
+
+        <h2>Mutual Funds Scraper</h2>
+
+        <p>
+            Collect mutual fund names, NAV values
+            and performance metrics.
+        </p>
+
+        <div class="skills">
+
+            <span>Python</span>
+            <span>BeautifulSoup</span>
+            <span>Pandas</span>
+
+        </div>
+
+        <div class="project-buttons">
+
+            <a href="/mutual_funds" class="btn">
+                Open Project
+            </a>
+
+           
+            <a href="https://github.com/sunainasaini036-hub/AIML-Bootcamp/blob/main/WebScrapingProject/api%20webscraping/currency_exchange_api.ipynb"
+               target="_blank"
+               class="btn notebook-btn">
+                Open Notebook
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- World Population -->
+
+    <div class="card">
+
+        <div class="icon">🌍</div>
+
+        <h2>World Population Explorer</h2>
+
+        <p>
+            Explore country-wise population statistics
+            through static web scraping.
+        </p>
+
+        <div class="skills">
+
+            <span>Python</span>
+            <span>Requests</span>
+            <span>BeautifulSoup</span>
+
+        </div>
+
+        <div class="project-buttons">
+
+            <a href="{{ url_for('worldpopulation') }}"
+               class="btn">
+                Open Project
+            </a>
+
+            <a href="https://github.com/sunainasaini036-hub/AIML-Bootcamp/blob/main/WebScrapingProject/api%20webscraping/currency_exchange_api.ipynb"
+               target="_blank"
+               class="btn notebook-btn">
+                Open Notebook
+            </a>
+
+
+        </div>
+
+    </div>
+
+    <!-- Wikipedia -->
+
+    <div class="card">
+
+        <div class="icon">🌐</div>
+
+        <h2>Wikipedia Extractor</h2>
+
+        <p>
+            Extract structured information and tables
+            from Wikipedia pages.
+        </p>
+
+        <div class="skills">
+
+            <span>Python</span>
+            <span>HTML</span>
+            <span>Pandas</span>
+
+        </div>
+
+        <div class="project-buttons">
+
+            <a href="/project5" class="btn">
+                Open Project
+            </a>
+
+            <a href="https://github.com/sunainasaini036-hub/AIML-Bootcamp/blob/main/WebScrapingProject/api%20webscraping/currency_exchange_api.ipynb"
+               target="_blank"
+               class="btn notebook-btn">
+                Open Notebook
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features">
+
+    <h2>Why Static Web Scraping?</h2>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+
+            <h3>⚡ HTML Parsing</h3>
+
+            <p>
+                Extract useful information from static websites.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <h3>📊 Data Collection</h3>
+
+            <p>
+                Collect products, books, statistics and much more.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <h3>📁 CSV Export</h3>
+
+            <p>
+                Save scraped data for analysis using Pandas.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    © 2026 Sunaina Saini | Static Web Scraping Projects
+
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,204 @@
+/* ===============================
+   RESET + FONT
+=============================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#070f1f,#0b1d38,#132f52);
+    color:#fff;
+}
+
+/* ===============================
+   GLOW BACKGROUND
+=============================== */
+
+body::before{
+    content:"";
+    position:fixed;
+    width:420px;
+    height:420px;
+    background:#2563eb;
+    border-radius:50%;
+    top:-120px;
+    left:-120px;
+    filter:blur(160px);
+    opacity:.35;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:450px;
+    height:450px;
+    background:#9333ea;
+    border-radius:50%;
+    bottom:-150px;
+    right:-120px;
+    filter:blur(160px);
+    opacity:.3;
+}
+
+/* ===============================
+   CONTAINER
+=============================== */
+
+.container{
+    width:95%;
+    max-width:1450px;
+    margin:40px auto;
+    padding:30px;
+
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:20px;
+    backdrop-filter:blur(18px);
+}
+
+/* ===============================
+   BUTTONS
+=============================== */
+
+.back-btn, .website-btn{
+    position:absolute;
+    top:25px;
+    padding:12px 18px;
+    border-radius:10px;
+    text-decoration:none;
+    color:#fff;
+    font-weight:600;
+    transition:.3s;
+}
+
+.back-btn{
+    left:25px;
+    background:#2563eb;
+}
+
+.website-btn{
+    right:25px;
+    background:#10b981;
+}
+
+.back-btn:hover{
+    background:#1d4ed8;
+    transform:translateY(-3px);
+}
+
+.website-btn:hover{
+    background:#059669;
+    transform:translateY(-3px);
+}
+
+/* ===============================
+   HEADING
+=============================== */
+
+.heading{
+    text-align:center;
+    margin-top:60px;
+    margin-bottom:30px;
+}
+
+.heading h1{
+    font-size:38px;
+    color:#60a5fa;
+}
+
+.heading p{
+    color:#cbd5e1;
+}
+
+/* ===============================
+   TABLE
+=============================== */
+
+.table-container{
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:1000px;
+}
+
+thead{
+    background:linear-gradient(90deg,#2563eb,#3b82f6);
+}
+
+thead th{
+    padding:15px;
+    color:#fff;
+}
+
+tbody tr{
+    transition:.3s;
+    border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+tbody tr:hover{
+    background:rgba(37,99,235,.15);
+    transform:scale(1.01);
+}
+
+tbody td{
+    padding:14px;
+    text-align:center;
+}
+
+/* ===============================
+   NAME
+=============================== */
+
+.name{
+    text-align:left;
+    font-weight:500;
+}
+
+/* ===============================
+   BUTTON
+=============================== */
+
+.visit-btn{
+    background:#2563eb;
+    color:#fff;
+    padding:6px 12px;
+    border-radius:8px;
+    text-decoration:none;
+    font-size:13px;
+}
+
+.visit-btn:hover{
+    background:#1d4ed8;
+}
+
+.na{
+    color:#9ca3af;
+}
+
+/* ===============================
+   RESPONSIVE
+=============================== */
+
+@media(max-width:768px){
+
+    .back-btn, .website-btn{
+        position:relative;
+        display:block;
+        margin:10px auto;
+        text-align:center;
+    }
+
+    .heading h1{
+        font-size:28px;
+    }
+}
