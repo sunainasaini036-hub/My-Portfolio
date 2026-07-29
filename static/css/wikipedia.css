@@ -1,0 +1,791 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+/* ===========================
+   GLOBAL
+=========================== */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#f5f8fc;
+
+    color:#333;
+
+    line-height:1.7;
+
+}
+
+
+
+/* ===========================
+   BACK BUTTON
+=========================== */
+
+.back-section{
+
+    width:90%;
+
+    margin:30px auto 0;
+
+}
+
+
+
+.back-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    text-decoration:none;
+
+    color:#6C63FF;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+
+
+.back-btn:hover{
+
+    color:#00B4DB;
+
+}
+
+
+
+/* ===========================
+   HERO SECTION
+=========================== */
+
+.wiki-hero{
+
+    width:90%;
+
+    margin:25px auto;
+
+    background:linear-gradient(
+    135deg,
+    #6C63FF,
+    #00B4DB);
+
+    border-radius:25px;
+
+    color:white;
+
+    padding:50px;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+}
+
+
+
+.hero-icon{
+
+    font-size:65px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.hero-content h1{
+
+    font-size:42px;
+
+    margin-bottom:15px;
+
+    font-weight:700;
+
+}
+
+
+
+.hero-content h2{
+
+    font-size:22px;
+
+    font-weight:500;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.hero-content h2 span{
+
+    font-weight:700;
+
+}
+
+
+
+.hero-content p{
+
+    max-width:900px;
+
+    margin:auto;
+
+    font-size:17px;
+
+    opacity:.95;
+
+}
+
+
+
+/* ===========================
+   OFFICIAL WEBSITE BUTTON
+=========================== */
+
+.hero-button{
+
+    margin-top:35px;
+
+}
+
+
+
+.official-btn{
+
+    display:inline-block;
+
+    padding:14px 30px;
+
+    border-radius:35px;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:rgba(255,255,255,.18);
+
+    border:2px solid rgba(255,255,255,.35);
+
+    transition:.3s;
+
+    font-weight:600;
+
+}
+
+
+
+.official-btn:hover{
+
+    background:white;
+
+    color:#6C63FF;
+
+}
+/* ===========================
+   MAIN CONTAINER
+=========================== */
+
+.wiki-container{
+
+    width:90%;
+
+    margin:40px auto 60px;
+
+}
+
+
+
+/* ===========================
+   CARDS
+=========================== */
+
+.wiki-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    margin-bottom:30px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+
+.wiki-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 18px 35px rgba(108,99,255,.18);
+
+}
+
+
+
+/* ===========================
+   SECTION TITLES
+=========================== */
+
+.section-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-size:28px;
+
+    color:#6C63FF;
+
+    margin-bottom:25px;
+
+}
+
+
+.section-title i{
+
+    color:#00B4DB;
+
+}
+
+
+
+/* ===========================
+   VIEW PROJECT
+=========================== */
+
+.wiki-card p{
+
+    font-size:17px;
+
+    color:#555;
+
+    text-align:justify;
+
+    line-height:1.9;
+
+}
+
+
+
+/* ===========================
+   PROJECT STATISTICS
+=========================== */
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+    gap:25px;
+
+}
+
+
+.stat-card{
+
+    background:linear-gradient(
+    135deg,
+    #6C63FF,
+    #00B4DB);
+
+    color:white;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+
+.stat-card:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+.stat-card h3{
+
+    font-size:36px;
+
+    margin-bottom:10px;
+
+}
+
+
+.stat-card p{
+
+    color:white;
+
+    font-size:16px;
+
+}
+
+
+
+/* ===========================
+   TECHNOLOGY TAGS
+=========================== */
+
+.technology{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+}
+
+
+.technology span{
+
+    background:#eef5ff;
+
+    color:#6C63FF;
+
+    padding:12px 22px;
+
+    border-radius:30px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+    border:2px solid #dce9ff;
+
+}
+
+
+.technology span:hover{
+
+    background:linear-gradient(
+    135deg,
+    #6C63FF,
+    #00B4DB);
+
+    color:white;
+
+    border-color:transparent;
+
+}
+
+
+
+/* ===========================
+   FEATURES
+=========================== */
+
+.feature-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+}
+
+
+.feature-card{
+
+    background:#f8fbff;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    text-align:center;
+
+    transition:.3s;
+
+    border:1px solid #e5efff;
+
+}
+
+
+.feature-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 12px 25px rgba(108,99,255,.15);
+
+}
+
+
+.feature-card i{
+
+    font-size:35px;
+
+    color:#00B4DB;
+
+    margin-bottom:15px;
+
+}
+
+
+.feature-card h3{
+
+    color:#6C63FF;
+
+    margin-bottom:12px;
+
+}
+
+
+.feature-card p{
+
+    font-size:15px;
+
+    text-align:center;
+
+    color:#666;
+
+}
+/* ===========================
+   SCRAPING WORKFLOW
+=========================== */
+
+.workflow{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+    margin-top:20px;
+
+}
+
+
+.workflow-step{
+
+    width:140px;
+
+    padding:20px;
+
+    text-align:center;
+
+    background:#f8fbff;
+
+    border-radius:18px;
+
+    border:1px solid #e5efff;
+
+    transition:.3s;
+
+}
+
+
+.workflow-step:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 12px 25px rgba(108,99,255,.15);
+
+}
+
+
+.workflow-step i{
+
+    font-size:35px;
+
+    color:#00B4DB;
+
+    margin-bottom:12px;
+
+}
+
+
+.workflow-step p{
+
+    color:#6C63FF;
+
+    font-weight:600;
+
+}
+
+
+.arrow{
+
+    font-size:26px;
+
+    color:#6C63FF;
+
+}
+
+
+
+/* ===========================
+   TABLE
+=========================== */
+
+.table-container{
+
+    overflow-x:auto;
+
+    margin-top:20px;
+
+}
+
+
+.wiki-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    min-width:700px;
+
+}
+
+
+.wiki-table thead{
+
+    background:linear-gradient(
+    135deg,
+    #6C63FF,
+    #00B4DB);
+
+    color:white;
+
+}
+
+
+.wiki-table th{
+
+    padding:18px;
+
+    text-align:left;
+
+    font-size:17px;
+
+}
+
+
+.wiki-table td{
+
+    padding:16px;
+
+    border-bottom:1px solid #eee;
+
+    color:#555;
+
+    vertical-align:top;
+
+}
+
+
+.wiki-table tbody tr:nth-child(even){
+
+    background:#f8fbff;
+
+}
+
+
+.wiki-table tbody tr:hover{
+
+    background:#eef6ff;
+
+}
+
+
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    margin-top:60px;
+
+    padding:30px;
+
+    text-align:center;
+
+    background:linear-gradient(
+    135deg,
+    #6C63FF,
+    #00B4DB);
+
+    color:white;
+
+    font-size:16px;
+
+}
+
+
+footer strong{
+
+    font-weight:700;
+
+}
+
+
+
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+
+@media(max-width:992px){
+
+.hero-content h1{
+
+    font-size:34px;
+
+}
+
+.hero-content h2{
+
+    font-size:20px;
+
+}
+
+.workflow{
+
+    gap:12px;
+
+}
+
+.workflow-step{
+
+    width:120px;
+
+}
+
+}
+
+
+
+@media(max-width:768px){
+
+.wiki-hero{
+
+    padding:35px 20px;
+
+}
+
+.hero-content h1{
+
+    font-size:28px;
+
+}
+
+.hero-content h2{
+
+    font-size:18px;
+
+}
+
+.hero-icon{
+
+    font-size:50px;
+
+}
+
+.section-title{
+
+    font-size:24px;
+
+}
+
+.stats-grid{
+
+    grid-template-columns:1fr 1fr;
+
+}
+
+.feature-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.workflow{
+
+    flex-direction:column;
+
+}
+
+.arrow{
+
+    transform:rotate(90deg);
+
+}
+
+.wiki-table{
+
+    min-width:600px;
+
+}
+
+}
+
+
+
+@media(max-width:480px){
+
+.stats-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.back-btn{
+
+    font-size:15px;
+
+}
+
+.hero-content h1{
+
+    font-size:24px;
+
+}
+
+.hero-content h2{
+
+    font-size:16px;
+
+}
+
+.official-btn{
+
+    width:100%;
+
+}
+
+}

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Currency Exchange API</title>
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/currency_api.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <a href="{{ url_for('apiscraping') }}" class="back">
+            ← Back
+        </a>
+
+        <h1>💱 Currency Exchange API</h1>
+
+        <a href="https://www.frankfurter.app/"
+            target="_blank"
+            class="official">
+
+            Official API
+
+        </a>
+
+    </header>
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero">
+
+        <h2>Real-Time Currency Exchange Rates</h2>
+
+        <p>
+            Retrieve live exchange rates using the Frankfurter Exchange Rate API.
+            This project demonstrates REST API integration, JSON data extraction,
+            and data visualization using Python and Flask.
+        </p>
+
+    </section>
+
+    <!-- ================= SUMMARY CARDS ================= -->
+
+    <section class="summary">
+
+        <div class="summary-card">
+
+            <h3>📊</h3>
+
+            <h2>{{ data.rates|length }}</h2>
+
+            <p>Total Rates</p>
+
+        </div>
+
+        <div class="summary-card">
+
+            <h3>💵</h3>
+
+            <h2>{{ data.base }}</h2>
+
+            <p>Base Currency</p>
+
+        </div>
+
+        <div class="summary-card">
+
+            <h3>📅</h3>
+
+            <h2>{{ data.date }}</h2>
+
+            <p>Last Updated</p>
+
+        </div>
+
+        <div class="summary-card">
+
+            <h3>🟢</h3>
+
+            <h2>LIVE</h2>
+
+            <p>API Status</p>
+
+        </div>
+
+    </section>    <!-- ================= EXCHANGE RATE CARDS ================= -->
+
+    <section class="exchange-section">
+
+        <h2 class="section-title">
+
+            🌍 Available Exchange Rates
+
+        </h2>
+
+        <p class="section-subtitle">
+
+            Live exchange rates retrieved from the Frankfurter Currency Exchange API.
+
+        </p>
+
+        <div class="cards">
+
+            {% for currency, rate in data.rates.items() %}
+
+            <div class="card">
+
+                <div class="currency-icon">
+
+                    {% if currency == "INR" %}
+                        🇮🇳
+                    {% elif currency == "EUR" %}
+                        🇪🇺
+                    {% elif currency == "GBP" %}
+                        🇬🇧
+                    {% elif currency == "JPY" %}
+                        🇯🇵
+                    {% elif currency == "AUD" %}
+                        🇦🇺
+                    {% elif currency == "CAD" %}
+                        🇨🇦
+                    {% else %}
+                        💱
+                    {% endif %}
+
+                </div>
+
+                <h2>{{ currency }}</h2>
+
+                <h3>{{ rate }}</h3>
+
+                <p>
+
+                    1 {{ data.base }} = {{ rate }} {{ currency }}
+
+                </p>
+
+                <span class="live-badge">
+
+                    ● Live Rate
+
+                </span>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= API INFORMATION ================= -->
+
+    <section class="api-info">
+
+        <h2 class="section-title">
+
+            📡 API Information
+
+        </h2>
+
+        <div class="info-container">
+
+            <div class="info-box">
+
+                <h4>API Name</h4>
+
+                <p>Frankfurter API</p>
+
+            </div>
+
+            <div class="info-box">
+
+                <h4>Request Method</h4>
+
+                <p>GET</p>
+
+            </div>
+
+            <div class="info-box">
+
+                <h4>Response Format</h4>
+
+                <p>JSON</p>
+
+            </div>
+
+            <div class="info-box">
+
+                <h4>Base Currency</h4>
+
+                <p>{{ data.base }}</p>
+
+            </div>
+
+            <div class="info-box">
+
+                <h4>Authentication</h4>
+
+                <p>No API Key Required</p>
+
+            </div>
+
+            <div class="info-box">
+
+                <h4>Official Website</h4>
+
+                <a href="https://www.frankfurter.app/" target="_blank">
+
+                    Visit API →
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= TECHNOLOGY STACK ================= -->
+
+    <section class="tech-stack">
+
+        <h2 class="section-title">
+
+            🛠 Technologies Used
+
+        </h2>
+
+        <div class="tech-container">
+
+            <span class="tech-badge">Python</span>
+
+            <span class="tech-badge">Flask</span>
+
+            <span class="tech-badge">Requests</span>
+
+            <span class="tech-badge">REST API</span>
+
+            <span class="tech-badge">JSON</span>
+
+            <span class="tech-badge">HTML5</span>
+
+            <span class="tech-badge">CSS3</span>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <h3>
+
+            Developed by Sunaina Saini
+
+        </h3>
+
+        <p>
+
+            AIML Bootcamp Portfolio Project
+
+        </p>
+
+    </footer>
+
+</div>
+
+</body>
+
+</html>

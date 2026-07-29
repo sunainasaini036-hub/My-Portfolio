@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Netflix Top 10</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/netflix_dynamic.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Back Button -->
+
+    <a href="{{ url_for('dynamicscraping') }}" class="back-btn">
+        ← Back to Dynamic Scraping
+    </a>
+
+    <!-- Hero -->
+
+    <section class="hero">
+
+        <h1>🎬 Netflix Top 10</h1>
+
+        <p>
+            Discover the latest trending Netflix Movies and TV Shows
+            dynamically scraped using Selenium WebDriver.
+        </p>
+
+        <a href="https://www.netflix.com/tudum/top10"
+           target="_blank"
+           class="official-btn">
+
+            Visit Official Netflix →
+
+        </a>
+
+    </section>
+
+    <!-- Statistics -->
+
+    <div class="stats">
+
+        <div class="stat-card">
+
+            <h2>{{ movies|length }}</h2>
+
+            <p>Titles Scraped</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h2>⚡</h2>
+
+            <p>Dynamic Scraping</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h2>🎬</h2>
+
+            <p>Netflix Tudum</p>
+
+        </div>
+
+    </div>
+
+    {% if movies %}
+
+    <div class="movie-grid">
+
+        {% for movie in movies %}
+
+        <div class="movie-card">
+
+            <!-- Poster -->
+
+            {% if movie.poster %}
+
+            <div class="poster">
+
+                <img src="{{ movie.poster }}"
+                     alt="{{ movie.title }}">
+
+                <span class="rank">
+
+                    🏆 TOP {{ movie.rank }}
+
+                </span>
+
+            </div>
+
+            {% endif %}
+
+            <!-- Content -->
+
+            <div class="content">
+
+                <h2>{{ movie.title }}</h2>
+
+                <div class="info-box">
+
+                    <div class="info">
+
+                        👀
+
+                        <span>{{ movie.views }}</span>
+
+                    </div>
+
+                    <div class="info">
+
+                        📅
+
+                        <span>{{ movie.weeks }}</span>
+
+                    </div>
+
+                    <div class="info">
+
+                        {% if movie.runtime %}
+
+                        ⏱
+
+                        <span>{{ movie.runtime }}</span>
+
+                        {% else %}
+
+                        ⌛
+
+                        <span>{{ movie.hours }}</span>
+
+                        {% endif %}
+
+                    </div>
+
+                </div>
+
+                <a href="{{ movie.link }}"
+                   target="_blank"
+                   class="watch-btn">
+
+                    ▶ View on Netflix
+
+                </a>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+    {% else %}
+
+    <div class="empty">
+
+        <h2>No Netflix Data Found 😔</h2>
+
+        <p>Please try again later.</p>
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+</body>
+
+</html>

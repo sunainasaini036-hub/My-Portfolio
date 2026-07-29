@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JSONPlaceholder API Explorer</title>
+
+    <link rel="stylesheet"
+href="{{ url_for('static', filename='css/jsonplaceholder_api.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+    <h2 class="logo">Sunaina Saini</h2>
+
+    <ul>
+
+        <li><a href="/portfolio">Portfolio</a></li>
+
+        <li><a href="/apiscraping">API Scraping</a></li>
+
+    </ul>
+
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <span class="tag">
+
+            📡 API Scraping Project
+
+        </span>
+
+        <h1>
+
+            JSONPlaceholder API Explorer
+
+        </h1>
+
+        <p>
+
+            Fetch and display live JSON data using Python, Requests,
+            REST API integration and Flask. This project demonstrates
+            how API responses are converted into dynamic web pages.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about">
+
+    <h2>About This Project</h2>
+
+    <div class="about-card">
+
+        <p>
+
+            JSONPlaceholder is a free fake REST API used for testing
+            and learning API integration. This project retrieves posts
+            using Python Requests, processes the JSON response and
+            dynamically displays the results using Flask templates.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================= LIVE DATA ================= -->
+
+<section class="posts-section">
+
+<h2>
+
+📄 Live API Data
+
+</h2>
+
+<div class="posts-grid">
+
+{% for post in data %}
+
+<div class="post-card">
+
+<div class="post-id">
+
+Post #{{ post.id }}
+
+</div>
+
+<h3>
+
+{{ post.title }}
+
+</h3>
+
+<p>
+
+{{ post.body }}
+
+</p>
+
+<div class="user">
+
+<i class="fa-solid fa-user"></i>
+
+User ID : {{ post.userId }}
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</section>
+
+<!-- ================= TECHNOLOGIES ================= -->
+
+<section class="technologies">
+
+<h2>Technologies Used</h2>
+
+<div class="tech-grid">
+
+<div class="tech-card">
+
+<i class="fa-brands fa-python"></i>
+
+<h3>Python</h3>
+
+<p>Used for requesting and processing API data.</p>
+
+</div>
+
+<div class="tech-card">
+
+<i class="fa-solid fa-cloud"></i>
+
+<h3>REST API</h3>
+
+<p>Fetches JSON data from JSONPlaceholder.</p>
+
+</div>
+
+<div class="tech-card">
+
+<i class="fa-solid fa-code"></i>
+
+<h3>Flask</h3>
+
+<p>Renders API data dynamically in HTML templates.</p>
+
+</div>
+
+<div class="tech-card">
+
+<i class="fa-solid fa-file-code"></i>
+
+<h3>JSON</h3>
+
+<p>Processes structured API responses efficiently.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= WORKFLOW ================= -->
+
+<section class="workflow">
+
+<h2>API Workflow</h2>
+
+<div class="workflow-container">
+
+<div class="step">
+
+<div class="number">1</div>
+
+<h3>Request API</h3>
+
+<p>Python sends an HTTP GET request.</p>
+
+</div>
+
+<div class="arrow">
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</div>
+
+<div class="step">
+
+<div class="number">2</div>
+
+<h3>Receive JSON</h3>
+
+<p>REST API returns JSON response.</p>
+
+</div>
+
+<div class="arrow">
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</div>
+
+<div class="step">
+
+<div class="number">3</div>
+
+<h3>Process Data</h3>
+
+<p>Python extracts useful information.</p>
+
+</div>
+
+<div class="arrow">
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</div>
+
+<div class="step">
+
+<div class="number">4</div>
+
+<h3>Display</h3>
+
+<p>Flask renders live data on the webpage.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= PROJECT STATS ================= -->
+
+<section class="statistics">
+
+<h2>Project Statistics</h2>
+
+<div class="stats-grid">
+
+<div class="stat-card">
+
+<h1>{{ data|length }}</h1>
+
+<p>Posts Retrieved</p>
+
+</div>
+
+<div class="stat-card">
+
+<h1>REST</h1>
+
+<p>API Type</p>
+
+</div>
+
+<div class="stat-card">
+
+<h1>JSON</h1>
+
+<p>Response Format</p>
+
+</div>
+
+<div class="stat-card">
+
+<h1>Live</h1>
+
+<p>API Data</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features">
+
+<h2>Project Features</h2>
+
+<div class="feature-grid">
+
+<div class="feature-card">
+
+<i class="fa-solid fa-cloud-arrow-down"></i>
+
+<h3>Live API Calls</h3>
+
+<p>Retrieves real-time data from a REST API.</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-code"></i>
+
+<h3>JSON Parsing</h3>
+
+<p>Converts JSON into readable Python objects.</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-layer-group"></i>
+
+<h3>Dynamic Cards</h3>
+
+<p>Displays every post using responsive cards.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= BUTTONS ================= -->
+
+<section class="bottom-buttons">
+
+<a href="https://jsonplaceholder.typicode.com/"
+target="_blank"
+class="btn">
+
+🌐 Official API
+
+</a>
+
+<a href="{{ url_for('apiscraping') }}"
+class="btn2">
+
+⬅ Back to API Scraping
+
+</a>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<h3>
+
+📡 JSONPlaceholder API Explorer
+
+</h3>
+
+<p>
+
+Built using Python • Requests • REST API • Flask
+
+</p>
+
+<p>
+
+© 2026 Sunaina Saini | Portfolio Project
+
+</p>
+
+</footer>
+
+</body>
+
+</html>

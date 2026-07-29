@@ -1,0 +1,597 @@
+/* ===========================================
+   GOOGLE FONT & RESET
+=========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5f7ff;
+    color:#333;
+}
+
+/* ===========================================
+   CONTAINER
+=========================================== */
+
+.container{
+    width:92%;
+    max-width:1400px;
+    margin:40px auto;
+}
+
+/* ===========================================
+   HEADER
+=========================================== */
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:35px;
+}
+
+.header h1{
+    color:#6C63FF;
+    font-size:38px;
+    font-weight:700;
+}
+
+/* ===========================================
+   BUTTONS
+=========================================== */
+
+.back-btn,
+.website-btn{
+
+    text-decoration:none;
+    color:#fff;
+
+    padding:12px 24px;
+
+    border-radius:12px;
+
+    background:linear-gradient(135deg,#6C63FF,#5BA8FF);
+
+    font-weight:600;
+
+    transition:.4s;
+
+}
+
+.back-btn:hover,
+.website-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 25px rgba(108,99,255,.25);
+
+}
+
+/* ===========================================
+   HERO SECTION
+=========================================== */
+
+.hero{
+
+    background:linear-gradient(135deg,#6C63FF,#5BA8FF);
+
+    color:white;
+
+    text-align:center;
+
+    padding:55px;
+
+    border-radius:22px;
+
+    margin-bottom:45px;
+
+    box-shadow:0 18px 40px rgba(108,99,255,.18);
+
+}
+
+.hero h2{
+
+    font-size:36px;
+
+    margin-bottom:15px;
+
+}
+
+.hero p{
+
+    max-width:850px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+    font-size:17px;
+
+}
+
+/* ===========================================
+   SUMMARY CARDS
+=========================================== */
+
+.summary{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+    margin-bottom:50px;
+
+}
+
+.summary-card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(108,99,255,.10);
+
+    transition:.4s;
+
+}
+
+.summary-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.summary-card .icon{
+
+    font-size:45px;
+
+    margin-bottom:15px;
+
+}
+
+.summary-card h3{
+
+    color:#6C63FF;
+
+    font-size:28px;
+
+    margin-bottom:8px;
+
+}
+
+.summary-card p{
+
+    color:#666;
+
+}
+
+/* ===========================================
+   PROJECT HIGHLIGHTS
+=========================================== */
+
+.highlights{
+
+    margin-bottom:55px;
+
+}
+
+.highlights h2{
+
+    text-align:center;
+
+    color:#6C63FF;
+
+    margin-bottom:25px;
+
+}
+
+.highlight-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+
+}
+
+.highlight-card{
+
+    background:white;
+
+    padding:22px;
+
+    text-align:center;
+
+    border-radius:16px;
+
+    border-top:4px solid #5BA8FF;
+
+    box-shadow:0 10px 25px rgba(108,99,255,.10);
+
+    transition:.35s;
+
+}
+
+.highlight-card:hover{
+
+    transform:translateY(-6px);
+
+}/* ===========================================
+   DIRECTORY
+=========================================== */
+
+.directory{
+
+    margin-bottom:60px;
+
+}
+
+.directory h2{
+
+    text-align:center;
+
+    color:#6C63FF;
+
+    margin-bottom:10px;
+
+    font-size:32px;
+
+}
+
+.directory p{
+
+    text-align:center;
+
+    color:#666;
+
+    margin-bottom:25px;
+
+}
+/* ===========================================
+   TABLE
+=========================================== */
+
+.table-container{
+
+    overflow-x:auto;
+
+    background:white;
+
+    border-radius:18px;
+
+    box-shadow:0 15px 35px rgba(108,99,255,.12);
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    min-width:950px;
+
+}
+
+thead{
+
+    background:linear-gradient(135deg,#6C63FF,#5BA8FF);
+
+}
+
+thead th{
+
+    color:white;
+
+    padding:18px;
+
+    font-weight:600;
+
+    text-align:center;
+
+}
+
+tbody td{
+
+    padding:16px;
+
+    text-align:center;
+
+    border-bottom:1px solid #ececff;
+
+}
+
+tbody tr{
+
+    transition:.35s;
+
+}
+
+tbody tr:nth-child(even){
+
+    background:#fafaff;
+
+}
+
+tbody tr:hover{
+
+    background:#eef3ff;
+
+}
+
+.name{
+
+    font-weight:600;
+
+    text-align:left;
+
+    color:#333;
+
+}
+
+/* ===========================================
+   VISIT BUTTON
+=========================================== */
+
+.visit-btn{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    padding:10px 18px;
+
+    border-radius:10px;
+
+    background:linear-gradient(135deg,#6C63FF,#5BA8FF);
+
+    color:white;
+
+    font-size:14px;
+
+    font-weight:500;
+
+    transition:.35s;
+
+}
+
+.visit-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 20px rgba(108,99,255,.25);
+
+}
+
+/* ===========================================
+   API INFORMATION
+=========================================== */
+
+.api-info{
+
+    margin:70px 0;
+
+}
+
+.api-info h2{
+
+    text-align:center;
+
+    color:#6C63FF;
+
+    margin-bottom:30px;
+
+}
+
+.info-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+}
+
+.info-card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(108,99,255,.10);
+
+    transition:.35s;
+
+}
+
+.info-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.info-card h3{
+
+    color:#6C63FF;
+
+    margin-bottom:10px;
+
+}
+
+.info-card p{
+
+    color:#666;
+
+}
+
+/* ===========================================
+   TECHNOLOGY STACK
+=========================================== */
+
+.tech-stack{
+
+    margin-bottom:60px;
+
+}
+
+.tech-stack h2{
+
+    text-align:center;
+
+    color:#6C63FF;
+
+    margin-bottom:30px;
+
+}
+
+.tech-grid{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:18px;
+
+}
+
+.tech{
+
+    background:linear-gradient(135deg,#6C63FF,#5BA8FF);
+
+    color:white;
+
+    padding:12px 22px;
+
+    border-radius:30px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.tech:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/* ===========================================
+   FOOTER
+=========================================== */
+
+.footer{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(108,99,255,.10);
+
+    margin-bottom:30px;
+
+}
+
+.footer h3{
+
+    color:#6C63FF;
+
+    margin-bottom:10px;
+
+}
+
+.footer p{
+
+    color:#666;
+
+}
+
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+
+@media(max-width:992px){
+
+.header{
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.hero{
+
+    padding:40px 25px;
+
+}
+
+.hero h2{
+
+    font-size:30px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.summary{
+
+    grid-template-columns:1fr;
+
+}
+
+.highlight-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.info-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.header h1{
+
+    font-size:28px;
+
+}
+
+.back-btn,
+.website-btn{
+
+    width:180px;
+
+    text-align:center;
+
+}
+
+}

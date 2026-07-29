@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>World Population Scraper</title>
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/worldpopulation.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+    <h2 class="logo">
+        Sunaina Saini
+    </h2>
+
+    <ul>
+
+        <li><a href="/portfolio">Portfolio</a></li>
+
+        <li><a href="/staticscraping">Static Scraping</a></li>
+
+    </ul>
+
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <span class="tag">
+
+            🌍 Static Web Scraping Project
+
+        </span>
+
+        <h1>
+
+            World Population Scraper
+
+        </h1>
+
+        <p>
+
+            Extract live country-wise population statistics from the
+            Worldometers website using Python, Requests and
+            BeautifulSoup. The scraped data is displayed dynamically
+            using Flask.
+
+        </p>
+
+        </div>
+     </section>
+<!-- ================= ABOUT ================= -->
+
+<section class="about">
+
+    <h2>
+
+        About This Project
+
+    </h2>
+
+    <div class="about-card">
+
+        <p>
+
+            This project demonstrates static web scraping using Python.
+            The application sends an HTTP request to the Worldometers
+            website, parses the HTML content using BeautifulSoup and
+            extracts live population statistics for countries around the
+            world.
+
+            The extracted data is displayed dynamically in a responsive
+            table using Flask templates.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================= LIVE TABLE ================= -->
+
+<section class="table-section">
+
+<h2>
+
+📊 Live Scraped Data
+
+</h2>
+
+<div class="table-container">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>#</th>
+
+<th>Country</th>
+
+<th>Population</th>
+
+<th>Yearly Change</th>
+
+<th>Net Change</th>
+
+<th>Density</th>
+
+<th>Land Area</th>
+
+<th>Migrants</th>
+
+<th>Fertility</th>
+
+<th>Median Age</th>
+
+<th>Urban %</th>
+
+<th>World Share</th>
+
+</tr>
+
+</thead>
+<tbody>
+    {% for row in data %}
+    <tr>
+        {% for col in row %}
+        <td>{{ col }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</tbody>
+
+</table>
+
+</div>
+
+</section><!-- ================= TECHNOLOGIES ================= -->
+
+<section class="technologies">
+
+    <h2>Technologies Used</h2>
+
+    <div class="tech-grid">
+
+        <div class="tech-card">
+            <i class="fa-brands fa-python"></i>
+            <h3>Python</h3>
+            <p>Main programming language used for building the scraper.</p>
+        </div>
+
+        <div class="tech-card">
+            <i class="fa-solid fa-spider"></i>
+            <h3>BeautifulSoup</h3>
+            <p>Parses HTML and extracts the required table data.</p>
+        </div>
+
+        <div class="tech-card">
+            <i class="fa-solid fa-globe"></i>
+            <h3>Requests</h3>
+            <p>Sends HTTP requests to the Worldometers website.</p>
+        </div>
+
+        <div class="tech-card">
+            <i class="fa-solid fa-fire"></i>
+            <h3>Flask</h3>
+            <p>Displays the scraped data dynamically in the browser.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= WORKFLOW ================= -->
+
+<section class="workflow">
+
+    <h2>Scraping Workflow</h2>
+
+    <div class="workflow-container">
+
+        <div class="step">
+            <div class="number">1</div>
+            <h3>Request Website</h3>
+            <p>Send an HTTP request to the Worldometers population page.</p>
+        </div>
+
+        <div class="arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+
+        <div class="step">
+            <div class="number">2</div>
+            <h3>Parse HTML</h3>
+            <p>BeautifulSoup reads and parses the HTML source.</p>
+        </div>
+
+        <div class="arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+
+        <div class="step">
+            <div class="number">3</div>
+            <h3>Extract Table</h3>
+            <p>Country-wise population statistics are extracted.</p>
+        </div>
+
+        <div class="arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+
+        <div class="step">
+            <div class="number">4</div>
+            <h3>Display Data</h3>
+            <p>Flask sends the extracted data to the HTML template.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= PROJECT STATS ================= -->
+
+<section class="statistics">
+
+    <h2>Project Statistics</h2>
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+
+            <h1>{{ data|length }}</h1>
+
+            <p>Countries Scraped</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h1>Python</h1>
+
+            <p>Programming Language</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h1>Static</h1>
+
+            <p>Web Scraping</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h1>Live</h1>
+
+            <p>Real-Time Data</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features">
+
+    <h2>Project Features</h2>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-table"></i>
+
+            <h3>Live Population Table</h3>
+
+            <p>Displays the latest country-wise population statistics.</p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-download"></i>
+
+            <h3>Real-Time Extraction</h3>
+
+            <p>Fetches fresh data directly from the source website.</p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-chart-column"></i>
+
+            <h3>Structured Output</h3>
+
+            <p>Displays the scraped information in an organized table.</p>
+
+        </div>
+
+    </div>
+
+</section><!-- ================= CHALLENGES ================= -->
+
+<section class="challenges">
+
+    <h2>Challenges Faced</h2>
+
+    <div class="challenge-grid">
+
+        <div class="challenge-card">
+
+            <i class="fa-solid fa-code"></i>
+
+            <h3>HTML Structure</h3>
+
+            <p>
+
+                The website contains a large HTML table, requiring careful
+                inspection of rows and columns for accurate extraction.
+
+            </p>
+
+        </div>
+
+        <div class="challenge-card">
+
+            <i class="fa-solid fa-globe"></i>
+
+            <h3>HTTP Requests</h3>
+
+            <p>
+
+                Browser request headers were added to prevent the website
+                from blocking automated requests.
+
+            </p>
+
+        </div>
+
+        <div class="challenge-card">
+
+            <i class="fa-solid fa-database"></i>
+
+            <h3>Data Cleaning</h3>
+
+            <p>
+
+                The extracted data was cleaned and formatted before being
+                displayed inside the HTML table.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= LEARNINGS ================= -->
+
+<section class="learning">
+
+    <h2>Key Learnings</h2>
+
+    <div class="learning-grid">
+
+        <div class="learn-card">
+            <i class="fa-brands fa-python"></i>
+            <h3>Python</h3>
+        </div>
+
+        <div class="learn-card">
+            <i class="fa-solid fa-spider"></i>
+            <h3>BeautifulSoup</h3>
+        </div>
+
+        <div class="learn-card">
+            <i class="fa-solid fa-globe"></i>
+            <h3>HTTP Requests</h3>
+        </div>
+
+        <div class="learn-card">
+            <i class="fa-solid fa-table"></i>
+            <h3>HTML Parsing</h3>
+        </div>
+
+        <div class="learn-card">
+            <i class="fa-solid fa-fire"></i>
+            <h3>Flask</h3>
+        </div>
+
+        <div class="learn-card">
+            <i class="fa-solid fa-chart-column"></i>
+            <h3>Data Visualization</h3>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= PROJECT INFO ================= -->
+
+<section class="project-info">
+
+    <div class="info-card">
+
+        <h2>Project Summary</h2>
+
+        <p>
+
+            This project demonstrates static web scraping using Python,
+            Requests and BeautifulSoup. Live population data is extracted
+            from the Worldometers website and displayed dynamically through
+            Flask in a responsive HTML table.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================= BUTTONS ================= -->
+
+<section class="bottom-buttons">
+
+    <a href="https://www.worldometers.info/world-population/population-by-country/"
+       target="_blank"
+       class="btn">
+
+        🌐 Official Website
+
+    </a>
+
+    <a href="{{ url_for('staticscraping') }}"
+       class="btn2">
+
+        ⬅ Back to Static Web Scraping
+
+    </a>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <h3>
+
+        🌍 World Population Scraper
+
+    </h3>
+
+    <p>
+
+        Built using Python • Requests • BeautifulSoup • Flask
+
+    </p>
+
+    <p>
+
+        © 2026 Sunaina Saini | Portfolio Project
+
+    </p>
+
+</footer>
+
+</body>
+</html>

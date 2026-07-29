@@ -1,0 +1,363 @@
+/* ==========================================
+   GOOGLE FONT
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ==========================================
+   BODY
+========================================== */
+
+body{
+    background:#eef3ff;
+    color:#333;
+}
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.container{
+    width:90%;
+    max-width:1450px;
+    margin:40px auto;
+}
+
+/* ==========================================
+   BACK BUTTON
+========================================== */
+
+.back-btn{
+    display:inline-block;
+    margin-bottom:35px;
+    text-decoration:none;
+    background:linear-gradient(135deg,#6a11cb,#2575fc);
+    color:white;
+    padding:12px 28px;
+    border-radius:12px;
+    font-weight:600;
+    transition:.35s;
+}
+
+.back-btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 25px rgba(95,46,234,.30);
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero{
+    background:linear-gradient(135deg,#6a11cb,#2575fc);
+    color:white;
+    text-align:center;
+    padding:55px 30px;
+    border-radius:22px;
+    margin-bottom:45px;
+    box-shadow:0 18px 35px rgba(95,46,234,.25);
+}
+
+.hero h1{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+    margin-bottom:25px;
+    line-height:1.7;
+}
+
+/* ==========================================
+   OFFICIAL BUTTON
+========================================== */
+
+.official-btn{
+    display:inline-block;
+    text-decoration:none;
+    background:white;
+    color:#6a11cb;
+    padding:14px 28px;
+    border-radius:40px;
+    font-weight:600;
+    transition:.35s;
+}
+
+.official-btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 30px rgba(255,255,255,.35);
+}
+
+/* ==========================================
+   STATS
+========================================== */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    margin-bottom:45px;
+}
+
+.stat-card{
+    background:white;
+    border-radius:18px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.stat-card:hover{
+    transform:translateY(-8px);
+}
+
+.stat-card h2{
+    color:#6a11cb;
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.stat-card p{
+    color:#666;
+}
+
+/* ==========================================
+   BOOK GRID
+========================================== */
+
+.book-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+/* ==========================================
+   BOOK CARD
+========================================== */
+
+.book-card{
+    background:white;
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+.book-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(95,46,234,.25);
+}
+
+/* ==========================================
+   IMAGE
+========================================== */
+
+.image-box{
+    position:relative;
+    overflow:hidden;
+}
+
+.image-box img{
+    width:100%;
+    height:330px;
+    object-fit:contain;
+    background:#f8f8f8;
+    transition:.45s;
+}
+
+.book-card:hover img{
+    transform:scale(1.05);
+}
+
+/* ==========================================
+   BOOK NUMBER
+========================================== */
+
+.book-id{
+    position:absolute;
+    top:15px;
+    left:15px;
+    background:#6a11cb;
+    color:white;
+    padding:8px 16px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:600;
+}
+
+/* ==========================================
+   CONTENT
+========================================== */
+
+.content{
+    padding:22px;
+}
+
+.content h2{
+    color:#4527a0;
+    font-size:22px;
+    margin-bottom:15px;
+    line-height:1.5;
+    min-height:70px;
+}
+
+/* ==========================================
+   RATING
+========================================== */
+
+.rating{
+    font-size:22px;
+    margin-bottom:18px;
+}
+
+/* ==========================================
+   INFO
+========================================== */
+
+.info{
+    background:#f7f5ff;
+    border-radius:12px;
+    padding:15px;
+    margin-bottom:20px;
+}
+
+.info p{
+    margin:8px 0;
+    color:#555;
+    font-size:15px;
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.view-btn{
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    background:linear-gradient(135deg,#6a11cb,#2575fc);
+    color:white;
+    padding:14px;
+    border-radius:40px;
+    font-weight:600;
+    transition:.35s;
+}
+
+.view-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 25px rgba(95,46,234,.35);
+}
+
+/* ==========================================
+   PAGINATION
+========================================== */
+
+.pagination{
+    margin:60px 0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:25px;
+}
+
+.pagination a{
+    text-decoration:none;
+    background:#6a11cb;
+    color:white;
+    padding:12px 24px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.pagination a:hover{
+    background:#2575fc;
+}
+
+.pagination span{
+    font-weight:600;
+    color:#4527a0;
+}
+
+/* ==========================================
+   EMPTY
+========================================== */
+
+.empty{
+    text-align:center;
+    padding:80px;
+}
+
+.empty h2{
+    color:#6a11cb;
+    margin-bottom:12px;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:992px){
+
+.book-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:768px){
+
+.book-grid{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:34px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.image-box img{
+height:300px;
+}
+
+}
+
+@media(max-width:480px){
+
+.container{
+width:95%;
+}
+
+.hero{
+padding:35px 20px;
+}
+
+.hero h1{
+font-size:28px;
+}
+
+.hero p{
+font-size:15px;
+}
+
+.content h2{
+font-size:20px;
+min-height:auto;
+}
+
+}
